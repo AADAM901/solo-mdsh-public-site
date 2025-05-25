@@ -28,63 +28,64 @@
         padding-top: 4rem;
         animation: fadeIn 1.2s ease-out;
       }
+
       .contact {
-  margin-top: 5rem;
-  padding: 2rem 1rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  animation: fadeInUp 1.8s ease-out;
-}
+        margin-top: 5rem;
+        padding: 2rem 1rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        animation: fadeInUp 1.8s ease-out;
+      }
 
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, #38bdf8, #818cf8);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+      .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #38bdf8, #818cf8);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-.contact p {
-  color: #cbd5e1;
-  margin-bottom: 2rem;
-}
+      .contact p {
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
 
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+      .contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-.contact input,
-.contact textarea {
-  padding: 0.8rem 1rem;
-  border-radius: 10px;
-  border: 1px solid #334155;
-  background: #1e293b;
-  color: white;
-  font-size: 1rem;
-  outline: none;
-  resize: none;
-}
+      .contact input,
+      .contact textarea {
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        border: 1px solid #334155;
+        background: #1e293b;
+        color: white;
+        font-size: 1rem;
+        outline: none;
+        resize: none;
+      }
 
-.contact button {
-  padding: 12px;
-  border-radius: 30px;
-  font-size: 1rem;
-  border: none;
-  background: linear-gradient(90deg, #06b6d4, #9333ea);
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+      .contact button {
+        padding: 12px;
+        border-radius: 30px;
+        font-size: 1rem;
+        border: none;
+        background: linear-gradient(90deg, #06b6d4, #9333ea);
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
 
-.contact button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #9333ea66;
-}
+      .contact button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #9333ea66;
+      }
 
       .logo {
         width: 140px;
@@ -228,17 +229,6 @@
       }
     </style>
   </head>
-<script>
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("formStatus");
-
-  form.addEventListener("submit", function (e) {
-    // Open default mail client and wait
-    setTimeout(() => {
-      status.style.display = "block";
-    }, 1000); // Show message after 1s delay
-  });
-</script>
 
   <body>
     <main class="container">
@@ -248,7 +238,7 @@
         The all-in-one autonomous system redefining how hospitality teams manage staff, stock,
         performance, and operations — powered by automation and built for speed.
       </p>
-      <a href="http://localhost:5173" target="_blank">
+      <a href="https://solo-mdsh-ui-l5rr.vercel.app" target="_blank">
         <button class="cta">🚀 Book a Demo</button>
       </a>
     </main>
@@ -281,29 +271,40 @@
         <img src="/demo-dashboard.png" alt="SOLO.MDSH Demo Screenshot" />
       </div>
     </section>
-        <section class="contact">
-  <h2>📨 Get in Touch</h2>
-  <p>If you're interested in SOLO.MDSH or want a private walkthrough — drop us a message below.</p>
-  <form id="contactForm">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
-  <button type="submit">📧 Send Message</button>
-  <p id="formStatus" style="margin-top: 1rem; color: #22c55e; display: none;">✅ Message sent successfully!</p>
-</form>
 
-</section>
-    <footer style="text-align: center; padding: 2rem 1rem; color: #94a3b8; font-size: 0.85rem; margin-top: 3rem;">
-  <div style="margin-bottom: 0.5rem;">
-    © 2025 SOLO.MD Limited · All rights reserved
-  </div>
-  <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-    <a href="#" style="color: #38bdf8; text-decoration: none;">Privacy Policy</a>
-    <a href="#" style="color: #38bdf8; text-decoration: none;">Terms of Use</a>
-    <a href="mailto:admin@solomdsh.onmicrosoft.com" style="color: #38bdf8; text-decoration: none;">Email Us</a>
-    <a href="https://solo-mdsh-public-site.vercel.app" style="color: #38bdf8; text-decoration: none;">Live Demo</a>
-  </div>
-</footer>
+    <section class="contact">
+      <h2>📨 Get in Touch</h2>
+      <p>If you're interested in SOLO.MDSH or want a private walkthrough — drop us a message below.</p>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
+        <button type="submit">📧 Send Message</button>
+        <p id="formStatus" style="margin-top: 1rem; color: #22c55e; display: none;">✅ Message sent successfully!</p>
+      </form>
+    </section>
 
+    <footer>
+      <div style="margin-bottom: 0.5rem;">
+        © 2025 SOLO.MD Limited · All rights reserved
+      </div>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="#" style="color: #38bdf8; text-decoration: none;">Privacy Policy</a>
+        <a href="#" style="color: #38bdf8; text-decoration: none;">Terms of Use</a>
+        <a href="mailto:admin@solomdsh.onmicrosoft.com" style="color: #38bdf8; text-decoration: none;">Email Us</a>
+        <a href="https://solo-mdsh-ui-l5rr.vercel.app" style="color: #38bdf8; text-decoration: none;">Live Demo</a>
+      </div>
+    </footer>
+
+    <script>
+      const form = document.getElementById("contactForm");
+      const status = document.getElementById("formStatus");
+
+      form.addEventListener("submit", function (e) {
+        setTimeout(() => {
+          status.style.display = "block";
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
