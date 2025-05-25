@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLO.MDSH – Next Gen Hospitality System</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #0a0f24, #1e2240);
+        color: #fff;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 4rem;
+        animation: fadeIn 1.2s ease-out;
+      }
+      .contact {
+  margin-top: 5rem;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  animation: fadeInUp 1.8s ease-out;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact p {
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+}
+
+.contact button {
+  padding: 12px;
+  border-radius: 30px;
+  font-size: 1rem;
+  border: none;
+  background: linear-gradient(90deg, #06b6d4, #9333ea);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #9333ea66;
+}
+
+      .logo {
+        width: 140px;
+        margin: 0 auto 30px;
+        filter: drop-shadow(0 0 10px #00ffffaa);
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        background: linear-gradient(90deg, #0ff, #a855f7);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .cta {
+        padding: 14px 36px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #9333ea, #06b6d4);
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 0 15px #06b6d4aa;
+        transition: all 0.3s ease;
+      }
+
+      .cta:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px #06b6d4dd;
+      }
+
+      .features,
+      .preview {
+        margin-top: 5rem;
+        padding: 2rem 1rem;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        animation: fadeInUp 1.5s ease-out;
+      }
+
+      .features h2,
+      .preview h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        background: linear-gradient(to right, #0ea5e9, #9333ea);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        background: #111827;
+        border: 1px solid #334155;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 10px #0ea5e930;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px #9333ea80;
+      }
+
+      .feature-card h3 {
+        font-size: 1.2rem;
+        color: #f1f5f9;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-card p {
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .preview-box {
+        background: #0f172a;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        border: 1px solid #334155;
+        box-shadow: 0 0 20px #9333ea55;
+        overflow: hidden;
+      }
+
+      .preview-box img {
+        width: 100%;
+        border-radius: 1rem;
+        transition: transform 0.4s ease;
+      }
+
+      .preview-box img:hover {
+        transform: scale(1.01);
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #94a3b8;
+        font-size: 0.85rem;
+        margin-top: 3rem;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <img src="/logo.png" alt="SOLO.MD Logo" class="logo" />
+      <h1>SOLO.MDSH – Smart Hospitality Reimagined</h1>
+      <p>
+        The all-in-one autonomous system redefining how hospitality teams manage staff, stock,
+        performance, and operations — powered by automation and built for speed.
+      </p>
+      <a href="http://localhost:5173" target="_blank">
+        <button class="cta">🚀 Book a Demo</button>
+      </a>
+    </main>
+
+    <section class="features">
+      <h2>⚡ Why SOLO.MDSH?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>🧠 Autonomous Operations</h3>
+          <p>Smart decision engine that adjusts shifts, stock, and costs — without manual input.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📊 Real-Time Cost Control</h3>
+          <p>Live dashboards and PDF reports show exactly where money is spent — and saved.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🧾 Zero-Effort Payroll</h3>
+          <p>Approved hours automatically become payroll-ready. No spreadsheets. No stress.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔒 Military-Grade Security</h3>
+          <p>Full audit logs, geo-verified clock-ins, and system self-healing security core.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview">
+      <h2>🖥️ Live System Preview</h2>
+      <div class="preview-box">
+        <img src="/demo-dashboard.png" alt="SOLO.MDSH Demo Screenshot" />
+      </div>
+    </section>
+        <section class="contact">
+  <h2>📨 Get in Touch</h2>
+  <p>If you're interested in SOLO.MDSH or want a private walkthrough — drop us a message below.</p>
+  <form action="mailto:solo.mdsh@hotmail.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
+    <button type="submit">📧 Send Message</button>
+  </form>
+</section>
+    <footer>© 2025 SOLO.MD Limited · All rights reserved</footer>
+  </body>
+</html>
