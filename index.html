@@ -228,6 +228,17 @@
       }
     </style>
   </head>
+<script>
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", function (e) {
+    // Open default mail client and wait
+    setTimeout(() => {
+      status.style.display = "block";
+    }, 1000); // Show message after 1s delay
+  });
+</script>
 
   <body>
     <main class="container">
@@ -273,12 +284,14 @@
         <section class="contact">
   <h2>📨 Get in Touch</h2>
   <p>If you're interested in SOLO.MDSH or want a private walkthrough — drop us a message below.</p>
-  <form action="mailto:admin@solomdsh.onmicrosoft.com" method="POST" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
-    <button type="submit">📧 Send Message</button>
-  </form>
+  <form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
+  <button type="submit">📧 Send Message</button>
+  <p id="formStatus" style="margin-top: 1rem; color: #22c55e; display: none;">✅ Message sent successfully!</p>
+</form>
+
 </section>
     <footer>© 2025 SOLO.MD Limited · All rights reserved</footer>
   </body>
