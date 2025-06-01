@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOLO.MDSH – Hospitality From The Future</title>
+    <title>SOLO.MDSH – Autonomous Hospitality Intelligence</title>
     <link rel="icon" type="image/png" href="/logo.png" />
     <style>
-      *, *::before, *::after {
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -14,184 +14,167 @@
 
       body {
         font-family: 'Segoe UI', sans-serif;
-        background: radial-gradient(circle at 50% 0%, #1e2240, #0a0f24);
-        color: #fff;
+        background: radial-gradient(circle at top left, #1e2240 0%, #0a0f24 100%);
+        color: #ffffff;
+        min-height: 100vh;
+        padding: 2rem 1rem;
         overflow-x: hidden;
-        position: relative;
+        background-image: radial-gradient(rgba(147, 51, 234, 0.15) 1px, transparent 1px);
+        background-size: 40px 40px;
       }
 
       .hero {
-        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
         text-align: center;
-        padding: 6rem 1rem 4rem;
-        z-index: 1;
+        padding-top: 5rem;
+        position: relative;
       }
 
       .logo {
         width: 140px;
-        margin-bottom: 30px;
-        filter: drop-shadow(0 0 25px #0ff) brightness(1.2);
-        animation: pulseLogo 4s infinite ease-in-out;
+        margin: 0 auto 30px;
+        filter: drop-shadow(0 0 12px #00ffffcc);
+        animation: pulseLogo 3s ease-in-out infinite;
+      }
+
+      @keyframes pulseLogo {
+        0%, 100% { filter: drop-shadow(0 0 12px #00ffffcc); }
+        50% { filter: drop-shadow(0 0 20px #00ffff); }
       }
 
       h1 {
         font-size: 3rem;
-        background: linear-gradient(90deg, #0ff, #9333ea);
-        background-clip: text;
+        background: linear-gradient(90deg, #00faff, #9333ea);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
       }
 
-      .hero p {
-        font-size: 1.3rem;
+      .tagline {
+        font-size: 1.25rem;
         color: #cbd5e1;
-        max-width: 700px;
-        margin: 0 auto 2.5rem;
-        line-height: 1.8;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
       }
 
       .cta {
-        padding: 14px 36px;
-        font-size: 1.1rem;
+        padding: 14px 40px;
+        font-size: 1.2rem;
         border: none;
-        border-radius: 30px;
+        border-radius: 40px;
         background: linear-gradient(90deg, #9333ea, #06b6d4);
         color: white;
         cursor: pointer;
-        box-shadow: 0 0 20px #06b6d4aa;
+        box-shadow: 0 0 25px #9333ea88;
         transition: all 0.3s ease;
       }
 
       .cta:hover {
-        transform: scale(1.08);
-        box-shadow: 0 0 30px #06b6d4dd;
+        transform: scale(1.05);
+        box-shadow: 0 0 40px #9333eadd;
       }
 
-      .section {
-        padding: 5rem 1rem 2rem;
-        max-width: 1100px;
-        margin: 0 auto;
+      section {
+        max-width: 1200px;
+        margin: 5rem auto;
+        padding: 0 1rem;
       }
 
-      .section h2 {
+      h2.section-title {
         font-size: 2.2rem;
-        text-align: center;
-        margin-bottom: 2.5rem;
-        background: linear-gradient(to right, #38bdf8, #9333ea);
+        margin-bottom: 2rem;
+        background: linear-gradient(90deg, #818cf8, #38bdf8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-align: center;
       }
 
-      .grid {
+      .features {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 2rem;
       }
 
-      .card {
-        background: #111827;
+      .feature-card {
+        background: rgba(255, 255, 255, 0.03);
         border: 1px solid #334155;
-        padding: 1.5rem;
         border-radius: 1.5rem;
-        box-shadow: 0 0 20px #38bdf830;
+        padding: 2rem;
+        box-shadow: 0 0 20px #0ea5e955;
+        backdrop-filter: blur(6px);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 0 35px #9333ea80;
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 30px #9333ea99;
       }
 
-      .card h3 {
-        font-size: 1.25rem;
+      .feature-card h3 {
         color: #f1f5f9;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.5rem;
       }
 
-      .card p {
-        font-size: 1rem;
+      .feature-card p {
         color: #cbd5e1;
+        font-size: 0.95rem;
         line-height: 1.6;
       }
 
-      .glow-bg {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100vw;
-        height: 100vh;
-        background: radial-gradient(ellipse at center, #9333ea22, transparent 70%);
-        z-index: 0;
-        pointer-events: none;
-        animation: pulseGlow 8s infinite;
-      }
-
-      footer {
+      .footer {
         text-align: center;
-        padding: 3rem 1rem;
         font-size: 0.85rem;
-        color: #94a3b8;
-      }
-
-      @keyframes pulseGlow {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 0.6; }
-      }
-
-      @keyframes pulseLogo {
-        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 25px #0ff); }
-        50% { transform: scale(1.05); filter: drop-shadow(0 0 35px #38bdf8); }
+        color: #64748b;
+        margin-top: 4rem;
       }
     </style>
   </head>
   <body>
-    <div class="glow-bg"></div>
-    <section class="hero">
-      <img src="/logo.png" alt="SOLO.MDSH Logo" class="logo" />
-      <h1>SOLO.MDSH – Smart Hospitality Reimagined</h1>
-      <p>
-        Discover the future of autonomous hospitality. From real-time financial control to self-adjusting rotas and zero-effort payroll — SOLO.MDSH is your AI-powered command center.
+    <main class="hero">
+      <img src="/logo.png" alt="SOLO.MD Logo" class="logo" />
+      <h1>SOLO.MDSH</h1>
+      <p class="tagline">
+        100 years ahead: the autonomous brain for hospitality teams.<br />
+        From staff to stock to savings — one AI-powered system.
       </p>
       <a href="https://solo-mdsh-ui-l5rr.vercel.app" target="_blank">
         <button class="cta">🚀 Book a Demo</button>
       </a>
-    </section>
+    </main>
 
-    <section class="section">
-      <h2>🔍 What SOLO.MDSH Can Do</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>🤖 Self-Governing Rotas</h3>
-          <p>Schedules build themselves based on availability, budget and shift history — with zero input.</p>
+    <section>
+      <h2 class="section-title">⚙️ Powered by Intelligence</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>🤖 Self-Learning Scheduling</h3>
+          <p>
+            Instantly adapts to sales, weather, events and availability — no manual rotas ever again.
+          </p>
         </div>
-        <div class="card">
-          <h3>📉 Instant Forecast Control</h3>
-          <p>Predicts costs ahead of time and gives real-time spend visibility. Budget like never before.</p>
+        <div class="feature-card">
+          <h3>📦 Predictive Stock Control</h3>
+          <p>
+            Waste-free ordering powered by AI. Cuts costs and boosts margins automatically.
+          </p>
         </div>
-        <div class="card">
-          <h3>📦 AI-Driven Purchasing</h3>
-          <p>Order suggestions automatically align with demand, stock velocity, and best supplier cost.</p>
+        <div class="feature-card">
+          <h3>💸 Payroll in 1 Tap</h3>
+          <p>
+            Approved shifts become payroll-ready data. Full audit trail. No spreadsheets needed.
+          </p>
         </div>
-        <div class="card">
-          <h3>📄 Automated Payroll</h3>
-          <p>Clock-ins get verified, hours approved, and payroll-ready without touching a spreadsheet.</p>
-        </div>
-        <div class="card">
-          <h3>🛡️ Built-in Compliance</h3>
-          <p>Audit logs, location rules, and smart restrictions protect your ops from human error.</p>
-        </div>
-        <div class="card">
-          <h3>🚨 Real-Time Alerts</h3>
-          <p>Be alerted instantly to overspending, under-staffing, or unusual operational patterns.</p>
+        <div class="feature-card">
+          <h3>🛡️ Built for Security</h3>
+          <p>
+            End-to-end encryption, geo-verification, and self-healing infrastructure ensure 24/7 uptime.
+          </p>
         </div>
       </div>
     </section>
 
-    <footer>
-      <p>© 2025 SOLO.MD Limited — Built for the next 100 years of hospitality.</p>
+    <footer class="footer">
+      © 2025 SOLO.MD Limited · All rights reserved
     </footer>
   </body>
 </html>
