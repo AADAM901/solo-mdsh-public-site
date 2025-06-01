@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOLO.MDSH – Smart Hospitality Reimagined</title>
+    <title>SOLO.MDSH – Next Gen Hospitality System</title>
     <link rel="icon" type="image/png" href="/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
@@ -13,11 +14,11 @@
       }
 
       body {
-        font-family: 'Segoe UI', sans-serif;
-        background: radial-gradient(circle at top, #0f172a, #0a0f24);
+        font-family: 'Outfit', sans-serif;
+        background: linear-gradient(135deg, #0a0f24, #1e2240);
         color: #fff;
         min-height: 100vh;
-        padding: 0;
+        padding: 2rem 1rem;
         overflow-x: hidden;
       }
 
@@ -26,93 +27,34 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
-        background-color: #0a0f24;
-        border-bottom: 1px solid #334155;
-        position: sticky;
-        top: 0;
-        z-index: 999;
+        background: rgba(17, 24, 39, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        margin-bottom: 2rem;
       }
 
-      .nav-logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .nav-logo img {
-        width: 50px;
-        filter: drop-shadow(0 0 10px #38bdf8);
-      }
-
-      .nav-logo span {
-        font-size: 1.2rem;
-        font-weight: bold;
-        background: linear-gradient(to right, #38bdf8, #818cf8);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      nav ul {
-        display: flex;
-        list-style: none;
-        gap: 1.5rem;
-      }
-
-      nav a {
-        color: #cbd5e1;
+      .nav-links a {
+        margin-left: 1.5rem;
         text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      nav a:hover {
         color: #38bdf8;
-      }
-
-      .auth-buttons {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .auth-buttons button {
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        border: none;
-        background: linear-gradient(to right, #06b6d4, #9333ea);
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .auth-buttons button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px #9333ea88;
-      }
-
-      .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 5rem 1rem 2rem;
-        animation: fadeIn 1.2s ease-out;
+        font-weight: 500;
       }
 
       .logo {
         width: 140px;
-        margin: 0 auto 30px;
-        filter: drop-shadow(0 0 20px #38bdf8);
-        animation: pulse 3s infinite ease-in-out;
+        filter: drop-shadow(0 0 10px #00ffffaa);
       }
 
       h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
         background: linear-gradient(90deg, #0ff, #a855f7);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 1rem;
       }
 
-      p.lead {
+      p {
         font-size: 1.2rem;
         color: #cbd5e1;
         margin-bottom: 2rem;
@@ -136,9 +78,16 @@
         box-shadow: 0 0 25px #06b6d4dd;
       }
 
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 4rem;
+        animation: fadeIn 1.2s ease-out;
+      }
+
       .features,
-      .preview,
-      .contact {
+      .preview {
         margin-top: 5rem;
         padding: 2rem 1rem;
         max-width: 1100px;
@@ -148,11 +97,11 @@
       }
 
       .features h2,
-      .preview h2,
-      .contact h2 {
+      .preview h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
         background: linear-gradient(to right, #0ea5e9, #9333ea);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
@@ -175,7 +124,7 @@
 
       .feature-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 0 25px #9333ea80;
+        box-shadow: 0 0 20px #9333ea80;
       }
 
       .feature-card h3 {
@@ -218,50 +167,48 @@
       }
 
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(40px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      @keyframes pulse {
-        0%, 100% { filter: drop-shadow(0 0 10px #0ff); }
-        50% { filter: drop-shadow(0 0 20px #0ff); }
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
 
   <body>
     <header>
-      <div class="nav-logo">
-        <img src="/logo.png" alt="SOLO.MD Logo" />
-        <span>SOLO.MDSH</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#preview">Preview</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
+      <img src="/logo.png" alt="SOLO.MD Logo" class="logo" />
+      <nav class="nav-links">
+        <a href="#features">Why Us</a>
+        <a href="#preview">Preview</a>
+        <a href="#contact">Contact</a>
+        <a href="#" style="font-weight: 700; color: #facc15;">Log In</a>
       </nav>
-      <div class="auth-buttons">
-        <button onclick="location.href='https://solo-mdsh-ui-l5rr.vercel.app/login'">Login</button>
-        <button onclick="location.href='https://solo-mdsh-ui-l5rr.vercel.app'">Book Demo</button>
-      </div>
     </header>
 
     <main class="container">
-      <img src="/logo.png" alt="SOLO.MD Logo" class="logo" />
-      <h1>Smart Hospitality Reimagined</h1>
-      <p class="lead">
-        The all-in-one autonomous system built with a smart decision algorithm that revolutionizes staff, stock, and performance management. Welcome to the future.
+      <h1>SOLO.MDSH – Smart Hospitality Reimagined</h1>
+      <p>
+        The all-in-one autonomous system powered by intelligent algorithms — redefining how teams manage staff, stock,
+        performance, and operations.
       </p>
       <a href="https://solo-mdsh-ui-l5rr.vercel.app" target="_blank">
-        <button class="cta">🚀 Launch Demo</button>
+        <button class="cta">🚀 Book a Demo</button>
       </a>
     </main>
 
@@ -270,40 +217,122 @@
       <div class="feature-grid">
         <div class="feature-card">
           <h3>🧠 Autonomous Operations</h3>
-          <p>Smart algorithm engine that adjusts shifts, stock, and costs — without manual input.</p>
+          <p>Smart algorithmic engine that adjusts shifts, stock, and costs — without manual input.</p>
         </div>
         <div class="feature-card">
           <h3>📊 Real-Time Cost Control</h3>
           <p>Live dashboards and PDF reports show exactly where money is spent — and saved.</p>
         </div>
         <div class="feature-card">
-          <h3>🧾 Effortless Payroll</h3>
+          <h3>🧾 Zero-Effort Payroll</h3>
           <p>Approved hours automatically become payroll-ready. No spreadsheets. No stress.</p>
         </div>
         <div class="feature-card">
-          <h3>🔒 Bulletproof Security</h3>
-          <p>Geo-tagged time logs, full audit trails, and self-healing systems for next-level protection.</p>
+          <h3>🔒 Military-Grade Security</h3>
+          <p>Full audit logs, geo-verified clock-ins, and system self-healing security core.</p>
         </div>
       </div>
     </section>
 
     <section id="preview" class="preview">
-      <h2>🖥️ Experience the Interface</h2>
+      <h2>🖥️ Live System Preview</h2>
       <div class="preview-box">
         <img src="/demo-dashboard.png" alt="SOLO.MDSH Demo Screenshot" />
       </div>
     </section>
 
     <section id="contact" class="contact">
-      <h2>📨 Get in Touch</h2>
-      <p>Drop us a message to schedule a walkthrough, partnership, or to join the beta.</p>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
-        <button type="submit">📧 Send Message</button>
-        <p id="formStatus" style="margin-top: 1rem; color: #22c55e; display: none;">✅ Message sent successfully!</p>
-      </form>
+      <div class="contact-wrapper" style="
+        background: rgba(17, 24, 39, 0.6);
+        border: 1px solid #334155;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px #38bdf855;
+        border-radius: 20px;
+        padding: 2rem;
+        animation: fadeInUp 1.6s ease-out;
+      ">
+        <h2 style="
+          font-size: 2.5rem;
+          background: linear-gradient(to right, #22d3ee, #8b5cf6);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 1rem;
+        ">
+          ✨ Let's Connect
+        </h2>
+        <p style="color: #cbd5e1; margin-bottom: 2rem;">
+          Whether you're curious about features, a private demo, or just want to say hi — we’re ready to talk.
+        </p>
+        <form id="contactForm" style="display: grid; gap: 1rem; text-align: left;">
+          <label style="color: #a1a1aa;">👤 Name</label>
+          <input type="text" name="name" placeholder="Your Name" required style="
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            background: rgba(30, 41, 59, 0.85);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+          "/>
+          <label style="color: #a1a1aa;">📧 Email</label>
+          <input type="email" name="email" placeholder="Your Email" required style="
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            background: rgba(30, 41, 59, 0.85);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+          "/>
+          <label style="color: #a1a1aa;">💬 Message</label>
+          <textarea name="message" placeholder="Your Message..." rows="5" required style="
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            background: rgba(30, 41, 59, 0.85);
+            color: #fff;
+            font-size: 1rem;
+            resize: none;
+            outline: none;
+          "></textarea>
+          <button type="submit" style="
+            margin-top: 1rem;
+            padding: 14px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            background: linear-gradient(90deg, #06b6d4, #9333ea);
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 20px #9333ea66;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          ">
+            🚀 Send Message
+          </button>
+          <p id="formStatus" style="
+            margin-top: 1rem;
+            color: #22c55e;
+            font-weight: 500;
+            display: none;
+          ">✅ Message sent successfully!</p>
+        </form>
+
+        <div style="
+          margin-top: 2rem;
+          border-top: 1px solid #334155;
+          padding-top: 1.5rem;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 2rem;
+          font-size: 0.95rem;
+          color: #94a3b8;
+        ">
+          <div>📨 <a href="mailto:admin@solomdsh.onmicrosoft.com" style="color: #38bdf8;">Email Us</a></div>
+          <div>📱 <a href="#" style="color: #38bdf8;">WhatsApp</a></div>
+          <div>📍 London, UK</div>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -323,9 +352,11 @@
       const status = document.getElementById("formStatus");
 
       form.addEventListener("submit", function (e) {
+        e.preventDefault();
         setTimeout(() => {
           status.style.display = "block";
-        }, 1000);
+          form.reset();
+        }, 800);
       });
     </script>
   </body>
