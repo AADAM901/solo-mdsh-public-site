@@ -3,361 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOLO.MDSH – Next Gen Hospitality System</title>
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <title>SOLO.MDSH – The Future of Hospitality</title>
+    <link rel="icon" href="/logo.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-
-      body {
+      html, body {
         font-family: 'Outfit', sans-serif;
-        background: linear-gradient(135deg, #0a0f24, #1e2240);
-        color: #fff;
+        background: linear-gradient(145deg, #0a0e23, #11192d);
+        color: #e0f2fe;
         min-height: 100vh;
-        padding: 2rem 1rem;
         overflow-x: hidden;
       }
-
       header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 2rem;
-        background: rgba(17, 24, 39, 0.8);
-        backdrop-filter: blur(10px);
-        border-radius: 1rem;
-        margin-bottom: 2rem;
+        padding: 1.5rem 2.5rem;
+        background: rgba(12, 18, 34, 0.85);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 0 20px rgba(0,255,255,0.1);
+        position: relative;
+        z-index: 10;
       }
-
-      .nav-links a {
-        margin-left: 1.5rem;
-        text-decoration: none;
-        color: #38bdf8;
-        font-weight: 500;
-      }
-
       .logo {
         width: 140px;
-        filter: drop-shadow(0 0 10px #00ffffaa);
+        filter: drop-shadow(0 0 12px #0ff8);
       }
-
-      h1 {
-        font-size: 2.8rem;
-        background: linear-gradient(90deg, #0ff, #a855f7);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 1rem;
+      .nav-links a {
+        margin-left: 1.8rem;
+        text-decoration: none;
+        color: #38bdf8;
+        font-weight: 600;
+        position: relative;
       }
-
-      p {
-        font-size: 1.2rem;
-        color: #cbd5e1;
-        margin-bottom: 2rem;
-        line-height: 1.6;
+      .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #38bdf8;
+        transition: width 0.3s ease;
       }
-
-      .cta {
-        padding: 14px 36px;
-        font-size: 1.1rem;
-        border: none;
-        border-radius: 30px;
-        background: linear-gradient(90deg, #9333ea, #06b6d4);
-        color: white;
-        cursor: pointer;
-        box-shadow: 0 0 15px #06b6d4aa;
-        transition: all 0.3s ease;
-      }
-
-      .cta:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px #06b6d4dd;
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 4rem;
-        animation: fadeIn 1.2s ease-out;
-      }
-
-      .features,
-      .preview {
-        margin-top: 5rem;
-        padding: 2rem 1rem;
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
-        animation: fadeInUp 1.5s ease-out;
-      }
-
-      .features h2,
-      .preview h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        background: linear-gradient(to right, #0ea5e9, #9333ea);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-      }
-
-      .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 2rem;
-      }
-
-      .feature-card {
-        background: #111827;
-        border: 1px solid #334155;
-        padding: 1.5rem;
-        border-radius: 1.5rem;
-        box-shadow: 0 0 10px #0ea5e930;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 20px #9333ea80;
-      }
-
-      .feature-card h3 {
-        font-size: 1.2rem;
-        color: #f1f5f9;
-        margin-bottom: 0.5rem;
-      }
-
-      .feature-card p {
-        color: #cbd5e1;
-        font-size: 0.95rem;
-        line-height: 1.5;
-      }
-
-      .preview-box {
-        background: #0f172a;
-        border-radius: 1.5rem;
-        padding: 1rem;
-        border: 1px solid #334155;
-        box-shadow: 0 0 20px #9333ea55;
-        overflow: hidden;
-      }
-
-      .preview-box img {
+      .nav-links a:hover::after {
         width: 100%;
-        border-radius: 1rem;
-        transition: transform 0.4s ease;
       }
-
-      .preview-box img:hover {
-        transform: scale(1.01);
+      main {
+        text-align: center;
+        padding: 6rem 1rem 3rem;
+        max-width: 900px;
+        margin: 0 auto;
       }
-
+      h1 {
+        font-size: 3rem;
+        background: linear-gradient(90deg, #0ff, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        font-size: 1.3rem;
+        color: #cbd5e1;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+      }
+      .cta-button {
+        display: inline-block;
+        font-size: 1.2rem;
+        padding: 1rem 2.5rem;
+        border-radius: 999px;
+        background: linear-gradient(270deg, #9333ea, #06b6d4);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 0 30px #06b6d455;
+        transition: all 0.4s ease;
+        animation: pulseGlow 3s infinite;
+      }
+      .cta-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 45px #06b6d4aa;
+      }
       footer {
         text-align: center;
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
+        font-size: 0.95rem;
         color: #94a3b8;
-        font-size: 0.85rem;
-        margin-top: 3rem;
       }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      footer a {
+        color: #38bdf8;
+        text-decoration: none;
+        margin: 0 1rem;
       }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
+      @keyframes pulseGlow {
+        0%, 100% {
+          box-shadow: 0 0 20px #9333ea88, 0 0 40px #06b6d444;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+        50% {
+          box-shadow: 0 0 30px #9333eacc, 0 0 60px #06b6d4aa;
         }
       }
     </style>
   </head>
-
   <body>
     <header>
-      <img src="/logo.png" alt="SOLO.MD Logo" class="logo" />
+      <img src="/logo.png" alt="SOLO.MDSH Logo" class="logo" />
       <nav class="nav-links">
-        <a href="#features">Why Us</a>
+        <a href="#why">Why Us</a>
         <a href="#preview">Preview</a>
         <a href="#contact">Contact</a>
-        <a href="#" style="font-weight: 700; color: #facc15;">Log In</a>
       </nav>
     </header>
 
-    <main class="container">
-      <h1>SOLO.MDSH – Smart Hospitality Reimagined</h1>
-      <p>
-        The all-in-one autonomous system powered by intelligent algorithms — redefining how teams manage staff, stock,
-        performance, and operations.
-      </p>
-      <a href="https://solo-mdsh-ui-l5rr.vercel.app" target="_blank">
-        <button class="cta">🚀 Book a Demo</button>
+    <main>
+      <h1>SOLO.MDSH – Next-Gen Hospitality OS</h1>
+      <p>Revolutionary cloud-driven automation to elevate your venues. Inventory. Staffing. Events. Finance. All in one powerful command center.</p>
+      <a class="cta-button" href="https://solo-mdsh-ui-manual-omega.vercel.app" target="_blank">
+        🚀 Book a Demo
       </a>
     </main>
 
-    <section id="features" class="features">
-      <h2>⚡ Why SOLO.MDSH?</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>🧠 Autonomous Operations</h3>
-          <p>Smart algorithmic engine that adjusts shifts, stock, and costs — without manual input.</p>
-        </div>
-        <div class="feature-card">
-          <h3>📊 Real-Time Cost Control</h3>
-          <p>Live dashboards and PDF reports show exactly where money is spent — and saved.</p>
-        </div>
-        <div class="feature-card">
-          <h3>🧾 Zero-Effort Payroll</h3>
-          <p>Approved hours automatically become payroll-ready. No spreadsheets. No stress.</p>
-        </div>
-        <div class="feature-card">
-          <h3>🔒 Military-Grade Security</h3>
-          <p>Full audit logs, geo-verified clock-ins, and system self-healing security core.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="preview" class="preview">
-      <h2>🖥️ Live System Preview</h2>
-      <div class="preview-box">
-        <img src="/demo-dashboard.png" alt="SOLO.MDSH Demo Screenshot" />
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="contact-wrapper" style="
-        background: rgba(17, 24, 39, 0.6);
-        border: 1px solid #334155;
-        backdrop-filter: blur(20px);
-        box-shadow: 0 0 30px #38bdf855;
-        border-radius: 20px;
-        padding: 2rem;
-        animation: fadeInUp 1.6s ease-out;
-      ">
-        <h2 style="
-          font-size: 2.5rem;
-          background: linear-gradient(to right, #22d3ee, #8b5cf6);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin-bottom: 1rem;
-        ">
-          ✨ Let's Connect
-        </h2>
-        <p style="color: #cbd5e1; margin-bottom: 2rem;">
-          Whether you're curious about features, a private demo, or just want to say hi — we’re ready to talk.
-        </p>
-        <form id="contactForm" style="display: grid; gap: 1rem; text-align: left;">
-          <label style="color: #a1a1aa;">👤 Name</label>
-          <input type="text" name="name" placeholder="Your Name" required style="
-            padding: 0.8rem 1rem;
-            border-radius: 12px;
-            border: 1px solid #334155;
-            background: rgba(30, 41, 59, 0.85);
-            color: #fff;
-            font-size: 1rem;
-            outline: none;
-          "/>
-          <label style="color: #a1a1aa;">📧 Email</label>
-          <input type="email" name="email" placeholder="Your Email" required style="
-            padding: 0.8rem 1rem;
-            border-radius: 12px;
-            border: 1px solid #334155;
-            background: rgba(30, 41, 59, 0.85);
-            color: #fff;
-            font-size: 1rem;
-            outline: none;
-          "/>
-          <label style="color: #a1a1aa;">💬 Message</label>
-          <textarea name="message" placeholder="Your Message..." rows="5" required style="
-            padding: 0.8rem 1rem;
-            border-radius: 12px;
-            border: 1px solid #334155;
-            background: rgba(30, 41, 59, 0.85);
-            color: #fff;
-            font-size: 1rem;
-            resize: none;
-            outline: none;
-          "></textarea>
-          <button type="submit" style="
-            margin-top: 1rem;
-            padding: 14px;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            background: linear-gradient(90deg, #06b6d4, #9333ea);
-            color: white;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 0 20px #9333ea66;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-          ">
-            🚀 Send Message
-          </button>
-          <p id="formStatus" style="
-            margin-top: 1rem;
-            color: #22c55e;
-            font-weight: 500;
-            display: none;
-          ">✅ Message sent successfully!</p>
-        </form>
-
-        <div style="
-          margin-top: 2rem;
-          border-top: 1px solid #334155;
-          padding-top: 1.5rem;
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 2rem;
-          font-size: 0.95rem;
-          color: #94a3b8;
-        ">
-          <div>📨 <a href="mailto:admin@solomdsh.onmicrosoft.com" style="color: #38bdf8;">Email Us</a></div>
-          <div>📱 <a href="#" style="color: #38bdf8;">WhatsApp</a></div>
-          <div>📍 London, UK</div>
-        </div>
-      </div>
-    </section>
-
     <footer>
-      <div style="margin-bottom: 0.5rem;">
-        © 2025 SOLO.MD Limited · All rights reserved
-      </div>
-      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="#" style="color: #38bdf8; text-decoration: none;">Privacy Policy</a>
-        <a href="#" style="color: #38bdf8; text-decoration: none;">Terms of Use</a>
-        <a href="mailto:admin@solomdsh.onmicrosoft.com" style="color: #38bdf8; text-decoration: none;">Email Us</a>
-        <a href="https://solo-mdsh-ui-l5rr.vercel.app" style="color: #38bdf8; text-decoration: none;">Live Demo</a>
+      <p>© 2025 SOLO.MD Ltd — All rights reserved</p>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="mailto:admin@solomdsh.onmicrosoft.com">Contact Us</a>
       </div>
     </footer>
-
-    <script>
-      const form = document.getElementById("contactForm");
-      const status = document.getElementById("formStatus");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        setTimeout(() => {
-          status.style.display = "block";
-          form.reset();
-        }, 800);
-      });
-    </script>
   </body>
 </html>

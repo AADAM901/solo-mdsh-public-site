@@ -1,0 +1,30 @@
+.
+├── folder-structure.txt
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── demo-dashboard.png
+│   └── logo.png
+├── solo-mdsh-public-site
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── public
+│   │   └── vite.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   ├── index.css
+│   │   └── main.jsx
+│   └── vite.config.js
+└── src
+    ├── App.jsx
+    ├── components
+    ├── main.jsx
+    ├── postcss.config.js
+    └── tailwind.config.js
+
+8 directories, 20 files
