@@ -3,139 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOLO.MDSH – The Future of Hospitality</title>
+    <title>SOLO.MDSH – Module Showcase</title>
     <link rel="icon" href="/logo.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      html, body {
+
+      body {
         font-family: 'Outfit', sans-serif;
-        background: linear-gradient(145deg, #0a0e23, #11192d);
-        color: #e0f2fe;
-        min-height: 100vh;
+        background: linear-gradient(135deg, #0a0f24, #1e2240);
+        color: #fff;
+        padding: 2rem;
         overflow-x: hidden;
       }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem 2.5rem;
-        background: rgba(12, 18, 34, 0.85);
-        backdrop-filter: blur(12px);
-        box-shadow: 0 0 20px rgba(0,255,255,0.1);
-        position: relative;
-        z-index: 10;
-      }
-      .logo {
-        width: 140px;
-        filter: drop-shadow(0 0 12px #0ff8);
-      }
-      .nav-links a {
-        margin-left: 1.8rem;
-        text-decoration: none;
-        color: #38bdf8;
-        font-weight: 600;
-        position: relative;
-      }
-      .nav-links a::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #38bdf8;
-        transition: width 0.3s ease;
-      }
-      .nav-links a:hover::after {
-        width: 100%;
-      }
-      main {
-        text-align: center;
-        padding: 6rem 1rem 3rem;
-        max-width: 900px;
-        margin: 0 auto;
-      }
+
       h1 {
+        text-align: center;
         font-size: 3rem;
+        margin-bottom: 2rem;
         background: linear-gradient(90deg, #0ff, #a855f7);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 1.5rem;
       }
-      p {
-        font-size: 1.3rem;
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: #111827;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 0 30px #0ea5e955;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 60px #0ea5e9cc;
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 1.5rem;
+      }
+
+      .card h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+        background: linear-gradient(90deg, #06b6d4, #9333ea);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .card p {
+        font-size: 1rem;
         color: #cbd5e1;
-        line-height: 1.7;
-        margin-bottom: 2.5rem;
       }
-      .cta-button {
+
+      .explore-button {
         display: inline-block;
-        font-size: 1.2rem;
-        padding: 1rem 2.5rem;
-        border-radius: 999px;
-        background: linear-gradient(270deg, #9333ea, #06b6d4);
+        margin-top: 1rem;
+        padding: 0.6rem 1.4rem;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #9333ea, #06b6d4);
         color: #fff;
         text-decoration: none;
         font-weight: 600;
-        box-shadow: 0 0 30px #06b6d455;
-        transition: all 0.4s ease;
-        animation: pulseGlow 3s infinite;
+        box-shadow: 0 0 15px #9333ea77;
+        transition: background 0.3s ease, transform 0.3s ease;
       }
-      .cta-button:hover {
+
+      .explore-button:hover {
         transform: scale(1.05);
-        box-shadow: 0 0 45px #06b6d4aa;
-      }
-      footer {
-        text-align: center;
-        padding: 3rem 1rem;
-        font-size: 0.95rem;
-        color: #94a3b8;
-      }
-      footer a {
-        color: #38bdf8;
-        text-decoration: none;
-        margin: 0 1rem;
-      }
-      @keyframes pulseGlow {
-        0%, 100% {
-          box-shadow: 0 0 20px #9333ea88, 0 0 40px #06b6d444;
-        }
-        50% {
-          box-shadow: 0 0 30px #9333eacc, 0 0 60px #06b6d4aa;
-        }
+        background: linear-gradient(90deg, #06b6d4, #9333ea);
       }
     </style>
   </head>
   <body>
-    <header>
-      <img src="/logo.png" alt="SOLO.MDSH Logo" class="logo" />
-      <nav class="nav-links">
-        <a href="#why">Why Us</a>
-        <a href="#preview">Preview</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <h1>SOLO.MDSH – Next-Gen Hospitality OS</h1>
-      <p>Revolutionary cloud-driven automation to elevate your venues. Inventory. Staffing. Events. Finance. All in one powerful command center.</p>
-      <a class="cta-button" href="https://solo-mdsh-ui-manual-omega.vercel.app" target="_blank">
-        🚀 Book a Demo
-      </a>
-    </main>
-
-    <footer>
-      <p>© 2025 SOLO.MD Ltd — All rights reserved</p>
-      <div>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="mailto:admin@solomdsh.onmicrosoft.com">Contact Us</a>
+    <h1>Explore the Future of Hospitality</h1>
+    <div class="grid">
+      <div class="card">
+        <img src="/images/staff-management.jpg" alt="Staff Management" />
+        <div class="card-content">
+          <h2>Staff Management</h2>
+          <p>AI-powered shift optimization, performance tracking, and burnout prevention — built for busy teams.</p>
+          <a href="#" class="explore-button">Explore</a>
+        </div>
       </div>
-    </footer>
+
+      <div class="card">
+        <img src="/images/inventory.jpg" alt="Inventory Module" />
+        <div class="card-content">
+          <h2>Inventory Intelligence</h2>
+          <p>Live tracking, smart restocking, and ingredient-level forecasting — say goodbye to waste.</p>
+          <a href="#" class="explore-button">Explore</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/images/finance.jpg" alt="Finance" />
+        <div class="card-content">
+          <h2>Financial Clarity</h2>
+          <p>Forecast, actuals, and profitability in real-time — so you’re never flying blind again.</p>
+          <a href="#" class="explore-button">Explore</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/images/event.jpg" alt="Event Planning" />
+        <div class="card-content">
+          <h2>Event Planning</h2>
+          <p>Connect menus, teams, budgets, and forecasts to run profitable events without surprises.</p>
+          <a href="#" class="explore-button">Explore</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
